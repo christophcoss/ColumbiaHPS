@@ -42,9 +42,9 @@ def f3():
 def f6():
     Q95 = np.percentile(allperiod.IN, 5)
     som7 = np.zeros(len(allperiod.IN)-7)
-    # for i in range(len(allperiod.IN)-7):
-    #     som7[i] = sum(allperiod.IN[i]+allperiod.IN[i+1]+allperiod.IN[i+2]+allperiod.IN[i+3]+allperiod.IN[i+4]+allperiod.IN[i+5]+allperiod.IN[i+6])
-    #     mini = min(som7)
-    # Mean = allperiod.IN.mean()
-    # formula3 = max(Q95)
-    return 
+    for i in range(len(allperiod.IN)-7):
+        som7[i] = (allperiod.IN[i]+allperiod.IN[i+1]+allperiod.IN[i+2]+allperiod.IN[i+3]+allperiod.IN[i+4]+allperiod.IN[i+5]+allperiod.IN[i+6])
+        mini = min(som7)
+    Mean = allperiod.IN.mean()
+    formula3 = max(Q95,mini,Mean)
+    return(formula3)
