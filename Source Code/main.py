@@ -9,14 +9,17 @@ from Parsers import *
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-    f1(data)
+    print(f1())
+    print(f2())
+    print(f3())
+    print(f6())
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     data = excelParser('Data/FlowData.xlsx', None)
-    print(data)
-
+    # print(data)
+    print_hi('niels')
 
     # this is just a test to make sure that it works
-    print(calcLCOE(10000, 500, 500, 0.08, 10))
+    # print(calcLCOE(10000, 500, 500, 0.08, 10))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
